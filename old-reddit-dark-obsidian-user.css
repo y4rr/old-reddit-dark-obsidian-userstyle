@@ -1,0 +1,700 @@
+/*THEME*/
+:root {
+    --fg: #aaa;
+    --bg: #181618;
+    --bg-odd: #1e1e1e;
+    --fg-2:#aaa;
+    --bg-2:#1e1e1e;
+    --fg-muted: #999;
+    --fg-input: #aaa;
+    --bg-input: #1e1e1e;
+    --fg-input-hover: #e6e6e6;
+    --bg-input-hover: #262626;
+    --border: solid 0.5px #333;
+    --border-radius: 4px;
+    --border-color: #333;
+    --fg-link: #e6e6e6;
+    --fg-link-hover: #435d81;
+    --fg-link-visited: #4c4c4c;
+    --fg-disabled: #999;
+    --bg-disabled: #333;
+    --fg-error: #fff;
+    --fg-warning: #fff;
+    --fg-info: #fff;
+    --fg-success: #fff;
+    --bg-error: #333;
+    --bg-warning: #333;
+    --bg-info: #333;
+    --bg-success: #333;
+    --syntax-fg: #F1F2F3;
+    --syntax-fg-2:#E8E2B7;
+    --syntax-bg: #293134;
+    --syntax-bg-2:#3F4B4E;
+    --syntax-comment: #66747B;
+    --syntax-builtin: #93C763;
+    --syntax-function: #678CB1;
+    --syntax-keyword: #7CCADD;
+    --syntax-number: #FFCD22;
+    --syntax-string: #EC7600;
+    --syntax-font-family: "SF Mono", "Menlo", "Liberation Mono", "Consolas", "DejaVu Sans Mono", "Ubuntu Mono", "Courier New", "andale mono", "lucida console", monospace;
+    --selection-fg: #000
+}
+
+/*BASE_STYLE*/
+.title a {
+    background: transparent !important;
+}
+
+.thing.gilded:hover
+
+/*,.thing:hover*/
+{
+    background: var(--bg-odd)
+}
+
+body>.content .link .rank {
+    width: auto !important
+}
+
+.thing {
+    padding: 3px 10px;
+    border-radius: 4px;
+    transition: height .2s ease-in-out
+}
+
+#header-img.default-header {
+    width: 30px
+}
+
+.redditmod-filter-subreddit-button {
+    border: none;
+    background-color: var(--fg-link);
+    color: var(--bg) !important;
+    font-weight: 900;
+    border-radius: 15px;
+    padding: 0 1.9px .5px;
+    margin-left: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5)
+}
+
+.redditmod-filter-subreddit-button:hover {
+    text-decoration: none !important;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5)
+}
+
+/*THEMED_STYLE*/
+#header-bottom-right,
+.ProfileSidebar__titleContainer,
+.ProfileTemplate.m-updated,
+.content,
+.link,
+.listing-chooser li.selected,
+.side,
+.tabmenu li.selected a,
+.user-subreddit-banner,
+body,
+body.with-listing-chooser .listing-chooser .grippy,
+html {
+    background-color: var(--bg)
+}
+
+#header,
+#sr-drop-down,
+#sr-header-area,
+.BlueBar,
+.Media.m-profile.m-image,
+.Post,
+.Post__pinInfo,
+.Post__stickiedDivider,
+.ProfileBarDropdown__list,
+.SubscriptionBar,
+.author-tooltip__head,
+.authorized-app,
+.crosspost-preview,
+.drop-choices,
+.explore-comment .explore-label,
+.explore-discovery .explore-label,
+.explore-hot .explore-label,
+.explore-rising .explore-label,
+.gold-accent,
+.hover-bubble,
+.infobar,
+.link .usertext-body .md,
+.linkinfo,
+.listing-chooser li,
+.liveupdate-listing li.liveupdate time::before,
+.liveupdate-listing li.separator time,
+.message .subject .correspondent,
+.message.new>.entry,
+.modal-content,
+.nextprev a:hover,
+.raisedbox,
+.report-modal .modal-content,
+.roundfield,
+.searchpane,
+.server-seconds,
+.sr-interest-bar,
+.sr-interest-bar .bubble,
+.subreddit .usertext .md,
+.tabmenu li a,
+.trophy-area .content,
+body.with-listing-chooser .listing-chooser,
+div.link.self:hover,
+main[role=main] {
+    background-color: var(--bg-2)
+}
+
+#newlink-with-image-upload #new-link-preview,
+#newlink-with-image-upload .image-upload-drop-target,
+#sr-more-link,
+.BlueBar__account,
+.goldvertisement a,
+.infobar.profilebetabar,
+.link .md:not(pre)>code,.link .md pre,.link.promotedlink.promoted,.md code,.md pre,.nextprev a,.tabmenu li a:hover,.usertable tr:hover,.usertext.border .usertext-body,.white-field,oddrow {
+    background-color: var(--bg-odd)
+}
+
+.form-control,
+.hover-bubble.multi-selector .create-multi input[type=text],
+.morelink,
+.morelink .nub,
+.morelink a,
+button.expand-summary,
+button.report-button,
+input,
+input[type=password],
+input[type=text],
+select,
+textarea {
+    background-color: var(--bg-input);
+    color: var(--fg-input)
+}
+
+.form-control:focus,
+.goldvertisement a:hover,
+.hover-bubble.multi-selector .create-multi input[type=text]:focus,
+.listing-chooser li:hover,
+.morelink:hover,
+.morelink:hover .nub,
+.morelink:hover a,
+body.with-listing-chooser .listing-chooser .grippy:hover::after,
+body.with-listing-chooser.listing-chooser-collapsed .listing-chooser .grippy::before,
+button.expand-summary:hover,
+input:focus,
+input[type=password]:focus,
+input[type=text]:focus,
+select:focus,
+textarea:focus {
+    background-color: var(--bg-input-hover);
+    color: var(--fg-input-hover)
+}
+
+.explore-comment .comment-fade,
+.form-control,
+.infobar.onboardingbar,
+.listing-chooser li.selected,
+.morelink,
+.morelink .nub,
+.morelink:hover,
+.morelink:hover .nub,
+.navbar,
+.search-expando.collapsed::before,
+.sidebox.hohoho .morelink,
+body,
+body.with-listing-chooser .listing-chooser .grippy:hover::after,
+body.with-listing-chooser.listing-chooser-collapsed .listing-chooser .grippy::before,
+input[type=text],
+select,
+textarea {
+    background-image: none
+}
+
+.hover-bubble.multi-selector label:hover,
+.icon-menu a,
+.morelink .nub,
+.side ul.content,
+.sidebox .spacer,
+.titlebox form.toggle,
+aside.sidebar #discussions li,
+div.link.self {
+    background-color: transparent
+}
+
+.ProfileBarDropdown__listItem:hover,
+.drop-choices a.choice:hover,
+.flair,
+.linkflairlabel,
+.wiki-page .pageactions .wikiaction:hover,
+a.message-count {
+    background-color: var(--fg-link);
+    color: var(--bg) !important
+}
+
+.tagline .flair {
+    background-color: var(--fg-muted);
+    color: var(--bg)
+}
+
+.md hr,
+.tabmenu.formtab .selected a {
+    background-color: var(--border-color)
+}
+
+.Post__pinInfo,
+.TabMenu__tab.m-active,
+.card a,
+.gold-accent,
+.goldvertisement,
+.hover-bubble,
+.liveupdate-listing li.separator time,
+.md,
+.message.message-parent>.entry .md,
+.message.recipient>.entry,
+.report-modal .modal-header-title,
+.report-modal .report-form-bottom-panel .report-form-content-policy p,
+.report-modal .report-form-last-step-text-custom-rules,
+.report-modal .report-reason-item .report-reason-display,
+.search-result-group footer .info,
+.side .titlebox .md ul li,
+.titlebox,
+.titlebox h1 a,
+.trophy-name,
+.user-subreddit-public-description,
+body,
+html,
+main[role=main] h1,
+main[role=main] h2,
+main[role=main] p {
+    color: var(--fg)
+}
+
+.Post__score,
+.TrendingProfilesSidebar__header,
+.TrophyCaseSidebar__header,
+.UserModeratedSubredditsSidebar__header,
+.UserSpecialsListSidebar__header,
+.author-tooltip__credentials-list strong,
+.brand,
+.dropdown.srdrop .selected,
+.gold-accent th,
+.gold-expiration-info .karma,
+.goldvertisement .progress p,
+.hover-bubble.multi-selector strong,
+.link .md:not(pre)>code,.link .rank,.listing-chooser h3,.search-result:link>mark,.search-result-group-header,.server-seconds em,.sidecontentbox .title h1,.titlebox h1 a:first-child,.wiki-page .wikititle,.wiki-page-content .md h1,.wiki-page-content .md h2,.wiki-page-content .md h3,.wiki-page-content .md h4,.wiki-page-content .md h5,aside.sidebar .md h2,aside.sidebar section,dl>dt,h1,h2,h3,h4,h5 {
+    color: var(--fg-2)
+}
+
+#sr-header-area .selected a,
+#sr-more-link,
+.Post__authorLink,
+.Post__authorLink:visited,
+.Post__flatListItem:link,
+.Post__source .Post__sourceLink,
+.Post__tagline,
+.ProfileSidebar__counters,
+.ProfileSidebar__description,
+.ProfileSidebar__displayName,
+.SubredditListItem__subscribers,
+.TrophyCaseSidebar__trophyDescription,
+.TrophyCaseSidebar__trophyTitle,
+.UserSpecialsListSidebar__date,
+.UserSpecialsListSidebar__title,
+.bottommenu,
+.dropdown.lightdrop .selected,
+.entry .buttons li a,
+.explore-comment .comment-link,
+.explore-item .explore-sr-details,
+.flat-list li.selected a,
+.flat-vert.title,
+.footer,
+.gray,
+.gray-buttons button,
+.listing-chooser li a .description,
+.liveupdate-listing li.liveupdate time,
+.md blockquote,
+.md del,
+.message .search-result-meta,
+.message .tagline,
+.message.message-parent.recipient>.entry .head,
+.message.message-parent>.entry .head,
+.message.message-reply.recipient>.entry .head,
+.multi-details h3,
+.muted,
+.nextprev,
+.preftable .details,
+.report-modal .report-form-block-user .report-form-action-desc p,
+.search-expando-button,
+.search-result .author:link,
+.search-result .search-subreddit-link:link,
+.search-result-meta,
+.separator,
+.sidebox .subtitle,
+.sidecontentbox .more a,
+.sr-list a:link,
+.sr-list a:link:hover,
+.sr-list a:visited,
+.subscription-box .title:visited,
+.tagline,
+.tagline .expand,
+.tagline>a.author,
+.titlebox .bottom,
+.titlebox form.toggle,
+.trophy-description,
+.user,
+.redditmod-visited a.title,
+aside.sidebar #discussions li,
+dl>dd,
+label.disabled,
+span.domain>a {
+    color: var(--fg-muted)
+}
+
+.BlueBar__logout,
+.ProfileBarDropdown__title,
+.listing-chooser .create button,
+.liveupdate-listing li.liveupdate a.author,
+.liveupdate-listing li.liveupdate:hover time,
+.report-modal .report-form-bottom-panel .report-form-content-policy a,
+.search-result:link,
+.subscription-box .title,
+.tabmenu li.selected a,
+.tagline a.subreddit,
+.thing .title,
+a,
+a:link {
+    color: var(--fg-link)
+}
+
+#sr-header-area .selected a:hover,
+.BlueBar__logout:hover,
+.Post__authorLink:hover,
+.Post__stickied-title:hover,
+.Post__subredditLink:hover,
+.ProfileBarDropdown__title.m-opened,
+.author-tooltip__head a:hover,
+.author-tooltip__link-list a:hover,
+.flat-list li.selected a:hover,
+.liveupdate-listing li.liveupdate:hover a.author,
+.report-modal .report-form-bottom-panel .report-form-content-policy a:hover,
+.search-result:link:hover,
+.sidecontentbox .more a:hover,
+.subscription-box .title:hover,
+.tabmenu li a:hover,
+.tagline a.subreddit,
+.thing .title:hover,
+a:hover,
+a:visited:hover {
+    color: var(--fg-link-hover)
+}
+
+.search-result:link:visited,
+.tabmenu li a,
+.tagline a.subreddit:visited,
+.thing .title:visited,
+a:visited {
+    color: var(--fg-link-visited)
+}
+
+.morelink>a,
+.spoiler-stamp,
+a.TrendingProfilesSidebar__follow,
+a.c-btn-primary {
+    color: #fff
+}
+
+.tagline .submitter {
+    color: #4af
+}
+
+.Post__moderatorFlair,
+.green,
+.tagline .moderator,
+.tagline .pinned-tagline,
+.tagline .stickied-tagline,
+.thing.stickied.link a.title,
+.thing.sticky-pinned.link a.title {
+    color: #3a3
+}
+
+input[style*="color:black"] {
+    color: var(--fg-input) !important
+}
+
+.trophy-name {
+    color: var(--fg-2) !important
+}
+
+hr {
+    color: var(--border-color)
+}
+
+#header,
+#liveupdate-statusbar.complete,
+#sr-header-area,
+.Post.m-profile,
+.Post__scoreDisplay,
+.content,
+.crosspost-preview,
+.explore-comment .explore-label,
+.explore-discovery .explore-label,
+.explore-hot .explore-label,
+.explore-rising .explore-label,
+.flair,
+.footer,
+.infobar.profilebetabar,
+.link,
+.linkflairlabel,
+.linkinfo,
+.navbar,
+.organic-listing,
+.permission-summary,
+.reddit-infobar,
+div.link.self,
+noborder {
+    border: none
+}
+
+button.expand-summary,
+button.report-button,
+custom-border,
+hr,
+input,
+select {
+    border: var(--border)
+}
+
+#compose-message .roundfield select,
+#header,
+#header hr,
+#sr-header-area,
+.BlueBar,
+.author-tooltip__credentials-list li,
+.author-tooltip__head,
+.author-tooltip_self .author-tooltip__head,
+.authorized-app,
+.c-form-control,
+.drop-choices,
+.explore-comment .comment,
+.filtered-details form.add-sr .sr-name,
+.footer .col,
+.formtabs-content,
+.hover-bubble,
+.hover-bubble.multi-selector .create-multi input[type=text],
+.infobar,
+.link .md pre,
+.link .usertext-body .md,
+.listing-chooser li,
+.listing-chooser li.selected,
+.liveupdate-listing li.separator::before,
+.md code,
+.md pre,
+.md td,
+.md th,
+.menuarea,
+.message.new>.entry,
+.morelink,
+.multi-details form.add-sr .sr-name,
+.nextprev a,
+.raisedbox,
+.report-modal .modal-content,
+.roundfield input[type=text],
+.roundfield textarea,
+.search-result-group-header,
+.sidebox.hohoho .morelink,
+.sidecontentbox .content,
+.subreddit .usertext .md,
+.subscription-box .box-separator,
+.titlebox .bottom,
+.wiki-page .pageactions,
+.wiki-page .wiki-page-content .wiki>.toc>ul,
+.wiki-page .wiki-page-content .wiki>.toc>ul ul,
+body.with-listing-chooser .listing-chooser .grippy,
+body.with-listing-chooser .listing-chooser .grippy::after,
+body.with-listing-chooser.listing-chooser-collapsed .listing-chooser .grippy::after,
+hr,
+input,
+select,
+textarea {
+    border-color: var(--border-color)
+}
+
+.tabmenu li.selected a {
+    border-color: transparent
+}
+
+#header-bottom-right {
+    border-bottom: solid 1px var(--bg)
+}
+
+.goldvertisement a,
+.listing-chooser .create button {
+    border-color: var(--fg-link)
+}
+
+.nextprev .separator {
+    border-color: var(--fg-muted)
+}
+
+.author-tooltip.hover-bubble.anchor-bottom-left::before,
+.author-tooltip.hover-bubble.anchor-bottom-right::before {
+    border-top-color: var(--bg-2)
+}
+
+.ProfileBarDropdown__title.m-arrow.m-opened::after,
+.ProfileBarDropdown__title.m-arrow::after,
+.TabMenu__tab.m-active::after {
+    border-top-color: var(--fg-muted)
+}
+
+.comment .child {
+
+    /*background:var(--bg-odd);*/border-left: solid 1px var(--fg-muted)
+}
+
+.comment .child:hover {
+
+    /*background:var(--bg);*/border-left: solid 1px var(--fg-input)
+}
+
+.hover-bubble.anchor-right::after {
+    border-left-color: var(--bg-2)
+}
+
+#liveupdate-statusbar.complete,
+success,
+success a {
+    background-color: var(--bg-success);
+    color: var(--fg-success)
+}
+
+.archived-infobar.with-icon::before,
+.content.submit .info-notice,
+.reddit-infobar,
+.reddit-infobar .md,
+info,
+info a {
+    background-color: var(--bg-info);
+    color: var(--fg-info)
+}
+
+.app-scope,
+warning {
+    background-color: var(--bg-warning);
+    color: var(--fg-warning)
+}
+
+error,
+error a {
+    background-color: var(--bg-error);
+    color: var(--fg-error)
+}
+
+disabled {
+    background-color: var(--bg-disabled);
+    color: var(--fg-disabled)
+}
+
+pre {
+    background-color: var(--syntax-bg);
+    color: var(--syntax-fg)
+}
+
+.infobar.profilebetabar,
+.organic-listing,
+.toc>ul {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1)
+}
+
+.crosspost-preview,
+.listing-chooser li.selected {
+    box-shadow: 30px 0 30px -15px rgba(255, 255, 255, .6) inset, 0 2px 6px -1px rgba(0, 0, 0, .6)
+}
+
+.goldvertisement,
+.report-flow-form.thing:hover {
+    box-shadow: none;
+    background-image: none
+}
+
+label.disabled {
+    cursor: not-allowed
+}
+
+.subreddit-subscribe:before {
+    filter: saturate(0) brightness(150%)
+}
+
+.subreddit-subscribe:hover:before {
+    filter: saturate(100%)
+}
+
+.add-sr button.add,
+.multi-details button.add,
+.multi-details button.remove-sr.remove-sr,
+img[src*="start_chat.png"] {
+    filter: invert(200%)
+}
+
+/*CSS_NO_ADS*/
+.goldvertisement,
+.thing.promoted,
+[id^="ad_"],
+#siteTable_organic {
+    display: none !important
+}
+
+/*CSS_NO_CHAT*/
+#chat-app,
+#chat,
+#chat + span {
+    display: none !important
+}
+
+/*CSS_NO_SUBLIST*/
+.sr-list > *:not(:first-child) {
+    display: none !important
+}
+
+/*CSS_NO_FOOTER*/
+.footer,
+.footer-parent {
+    display: none !important
+}
+
+/*CSS_NO_HEADER_IMAGE*/
+#header-img,
+.hohoho {
+    display: none !important
+}
+
+body.with-listing-chooser #header .pagename {
+    position: relative;
+    bottom: 0
+}
+
+/*CSS_COLLAPSE_SIDEBAR*/
+.side {
+    position: absolute;
+    transition: right .2s ease-in-out;
+    box-shadow: -5px 0 3px 0 rgba(0, 0, 0, .1);
+    padding-left: 10px;
+    right: -305px;
+    width: 300px;
+    z-index: 1
+}
+
+body {
+    overflow-x: hidden
+}
+
+.side:hover {
+    right: -5px
+}
+
+.side .nub {
+    opacity: 0
+}
+
+.side:hover .nub {
+    opacity: 1
+} 
