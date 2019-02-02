@@ -50,7 +50,7 @@
         --syntax-number: #FFCD22;
         --syntax-string: #EC7600;
         --syntax-font-family: "SF Mono", "Menlo", "Liberation Mono", "Consolas", "DejaVu Sans Mono", "Ubuntu Mono", "Courier New", "andale mono", "lucida console", monospace;
-        --selection-fg: #000
+        --selection-fg: #000;
     }
 
     /*BASE_STYLE*/
@@ -111,6 +111,10 @@
         background-color: var(--bg)
     }
 
+    div {
+        padding: initial !important;
+    }
+
     #header,
     #sr-drop-down,
     #sr-header-area,
@@ -152,9 +156,16 @@
     .tabmenu li a,
     .trophy-area .content,
     body.with-listing-chooser .listing-chooser,
-    div.link.self:hover,
     main[role=main] {
         background-color: var(--bg-2)
+    }
+
+    div.link:hover {
+        background-color: var(--bg-2)
+    }
+
+    div.link.self:hover {
+        background-color: var(--bg-1)
     }
 
     #newlink-with-image-upload #new-link-preview,
@@ -536,7 +547,8 @@
     }
 
     #header-bottom-right {
-        border-bottom: solid 1px var(--bg)
+        border-bottom: solid 1px var(--bg);
+        box-shadow: -5px 0 3px 0 rgba(0, 0, 0, .1);
     }
 
     .goldvertisement a,
@@ -691,7 +703,8 @@
         transition-property: right;
         transition-duration: 0s;
         box-shadow: -5px 0 3px 0 rgba(0, 0, 0, .1);
-        padding-left: 20px;
+        padding-right: 14px;
+        padding-left: 18px;
         right: -315px;
         width: 310px;
         z-index: 1
