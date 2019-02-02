@@ -1,9 +1,11 @@
 /* ==UserStyle==
 @name           Old Reddit - Dark Obsidian Userstyle
-@author         y4r (https://y4r.cc)
+@description    A nice clean dark user css for old Reddit
 @version        1.0
-@namespace      https://y4r.cc
+@author         y4r (https://y4r.cc)
 @license        WTFPL
+@homepageURL    htpps://github.com/y4rr/old-reddit-dark-obsidian-userstyle
+@updateURL      https://raw.githubusercontent.com/y4rr/old-reddit-dark-obsidian-userstyle/master/old-reddit-dark-obsidian.user.css
 ==/UserStyle== */
 
 @-moz-document domain("old.reddit.com"), domain("reddit.com")
