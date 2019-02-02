@@ -685,9 +685,10 @@
     /*CSS_COLLAPSE_SIDEBAR*/
     .side {
         position: absolute;
-        transition: right .2s ease-in-out;
+        transition-property: right;
+        transition-duration: 0s;
         box-shadow: -5px 0 3px 0 rgba(0, 0, 0, .1);
-        padding-left: 10px;
+        padding-left: 20px;
         right: -305px;
         width: 300px;
         z-index: 1
