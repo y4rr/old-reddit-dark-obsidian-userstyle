@@ -63,8 +63,6 @@
     }
 
     .thing.gilded:hover
-
-    /*,.thing:hover*/
     {
         background: var(--bg-odd)
     }
@@ -105,7 +103,9 @@
     .ProfileTemplate.m-updated,
     .content,
     .link,
+    .listing-chooser li,
     .listing-chooser li.selected,
+    body.with-listing-chooser .listing-chooser,
     .side,
     .tabmenu li.selected a,
     .user-subreddit-banner,
@@ -142,7 +142,6 @@
     .infobar,
     .link .usertext-body .md,
     .linkinfo,
-    .listing-chooser li,
     .liveupdate-listing li.liveupdate time::before,
     .liveupdate-listing li.separator time,
     .message .subject .correspondent,
@@ -159,7 +158,6 @@
     .subreddit .usertext .md,
     .tabmenu li a,
     .trophy-area .content,
-    body.with-listing-chooser .listing-chooser,
     main[role=main] {
         background-color: var(--bg-2)
     }
@@ -668,7 +666,12 @@
     .goldvertisement,
     .thing.promoted,
     [id^="ad_"],
-    #siteTable_organic {
+    #siteTable_organic,
+    .give-gold-button {
+        display: none !important
+    }
+
+    .listing-chooser {
         display: none !important
     }
 
@@ -702,24 +705,31 @@
     }
 
     /*CSS_COLLAPSE_SIDEBAR*/
+    body {
+        overflow-x: hidden
+    }
+
     .side {
-        position: absolute;
+        /*position: absolute;*/
         transition-property: right;
         transition-duration: 0s;
         box-shadow: -5px 0 3px 0 rgba(0, 0, 0, .1);
         padding-right: 14px;
         padding-left: 18px;
-        right: -315px;
+        margin-left: 0px;
+        margin-right: -315px;
         width: 310px;
         z-index: 1
     }
 
-    body {
-        overflow-x: hidden
+    body > .content, body {
+        z-index: -1;
+        position: relative;
     }
 
-    .side:hover {
-        right: -5px
+    .side:hover, .side:focus {
+        margin-left: -315px;
+        margin-right: 0px;
     }
 
     .side .nub {
