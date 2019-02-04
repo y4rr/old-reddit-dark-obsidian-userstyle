@@ -706,7 +706,7 @@
 
     /*CSS_COLLAPSE_SIDEBAR*/
     body {
-        overflow-x: hidden
+        overflow-x: hidden;
     }
 
     .side {
@@ -716,10 +716,10 @@
         box-shadow: -5px 0 3px 0 rgba(0, 0, 0, .1);
         padding-right: 14px;
         padding-left: 18px;
-        margin-left: 0px;
-        margin-right: -315px;
+        margin-left: -315px;
+        margin-right: 0px;
         width: 310px;
-        z-index: 1
+        opacity: 0.2;
     }
 
     body > .content, body {
@@ -728,8 +728,7 @@
     }
 
     .side:hover, .side:focus {
-        margin-left: -315px;
-        margin-right: 0px;
+        opacity: 1;
     }
 
     .side .nub {
