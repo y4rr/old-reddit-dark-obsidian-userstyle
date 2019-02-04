@@ -11,16 +11,17 @@
 
 @-moz-document domain("old.reddit.com"), domain("reddit.com")
 {
+
     /*THEME*/
     :root {
         --fg: #aaa;
         --bg: #181618;
-        --bg-odd: #1e1e1e;
+        --bg-odd: #1c1c1c;
         --fg-2:#aaa;
-        --bg-2:#1e1e1e;
+        --bg-2:#1c1c1c;
         --fg-muted: #999;
         --fg-input: #aaa;
-        --bg-input: #1e1e1e;
+        --bg-input: #1c1c1c;
         --fg-input-hover: #e6e6e6;
         --bg-input-hover: #262626;
         --border: solid 0.5px #333;
@@ -71,9 +72,18 @@
         width: auto !important
     }
 
+
+    .link .title {
+        font-size: 18px;
+    }
+    .title {
+       margin-top: -5px;
+       margin-bottom: 5px;
+    }
+
     .thing {
-        padding: 3px 10px;
-        border-radius: 4px;
+        padding: 4px 10px;
+        border-radius: 2px;
         transition: height .2s ease-in-out
     }
 
@@ -113,6 +123,10 @@
     body.with-listing-chooser .listing-chooser .grippy,
     html {
         background-color: var(--bg)
+    }
+
+    .thing[data-context=listing] {
+        background-color: var(--bg-odd)
     }
 
     #header-bottom-right > span {
@@ -163,7 +177,7 @@
     }
 
     div.link:hover,  div.link[data-context=listing]:hover  {
-        background-color: var(--bg-2)
+        background-color: var(--bg)
     }
 
     div.link[data-context=comments]:hover {
@@ -242,7 +256,7 @@
     .sidebox .spacer,
     .titlebox form.toggle,
     aside.sidebar #discussions li,
-    div.link.self {
+    /*div.link.self*/ {
         background-color: transparent
     }
 
@@ -719,11 +733,10 @@
         margin-left: -315px;
         margin-right: 0px;
         width: 310px;
-        opacity: 0.2;
+        opacity: 0;
     }
 
     body > .content, body {
-        z-index: -1;
         position: relative;
     }
 
