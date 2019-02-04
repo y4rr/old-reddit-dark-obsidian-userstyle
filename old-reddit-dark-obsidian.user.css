@@ -1,27 +1,26 @@
 /* ==UserStyle==
-@name           Old Reddit - Dark Obsidian Userstyle Dev
+@name           Old Reddit - Dark Obsidian Userstyle
 @description    A nice clean dark user css for old Reddit
 @version        1.1.5
 @author         y4r
 @namespace      cc.y4r
 @license        WTFPL
 @homepageURL    https://github.com/y4rr/old-reddit-dark-obsidian-userstyle
-@updateURL      https://raw.githubusercontent.com/y4rr/old-reddit-dark-obsidian-userstyle/dev/old-reddit-dark-obsidian.user.css
+@updateURL      https://raw.githubusercontent.com/y4rr/old-reddit-dark-obsidian-userstyle/master/old-reddit-dark-obsidian.user.css
 ==/UserStyle== */
 
 @-moz-document domain("old.reddit.com"), domain("reddit.com")
 {
-
     /*THEME*/
     :root {
         --fg: #aaa;
         --bg: #181618;
-        --bg-odd: #1c1c1c;
+        --bg-odd: #1e1e1e;
         --fg-2:#aaa;
-        --bg-2:#1c1c1c;
+        --bg-2:#1e1e1e;
         --fg-muted: #999;
         --fg-input: #aaa;
-        --bg-input: #1c1c1c;
+        --bg-input: #1e1e1e;
         --fg-input-hover: #e6e6e6;
         --bg-input-hover: #262626;
         --border: solid 0.5px #333;
@@ -64,6 +63,8 @@
     }
 
     .thing.gilded:hover
+
+    /*,.thing:hover*/
     {
         background: var(--bg-odd)
     }
@@ -72,18 +73,9 @@
         width: auto !important
     }
 
-
-    .link .title {
-        font-size: 18px;
-    }
-    .title {
-       margin-top: -5px;
-       margin-bottom: 5px;
-    }
-
     .thing {
-        padding: 4px 10px;
-        border-radius: 2px;
+        padding: 3px 10px;
+        border-radius: 4px;
         transition: height .2s ease-in-out
     }
 
@@ -113,9 +105,7 @@
     .ProfileTemplate.m-updated,
     .content,
     .link,
-    .listing-chooser li,
     .listing-chooser li.selected,
-    body.with-listing-chooser .listing-chooser,
     .side,
     .tabmenu li.selected a,
     .user-subreddit-banner,
@@ -123,10 +113,6 @@
     body.with-listing-chooser .listing-chooser .grippy,
     html {
         background-color: var(--bg)
-    }
-
-    .thing[data-context=listing] {
-        background-color: var(--bg-odd)
     }
 
     #header-bottom-right > span {
@@ -156,6 +142,7 @@
     .infobar,
     .link .usertext-body .md,
     .linkinfo,
+    .listing-chooser li,
     .liveupdate-listing li.liveupdate time::before,
     .liveupdate-listing li.separator time,
     .message .subject .correspondent,
@@ -172,12 +159,13 @@
     .subreddit .usertext .md,
     .tabmenu li a,
     .trophy-area .content,
+    body.with-listing-chooser .listing-chooser,
     main[role=main] {
         background-color: var(--bg-2)
     }
 
     div.link:hover,  div.link[data-context=listing]:hover  {
-        background-color: var(--bg)
+        background-color: var(--bg-2)
     }
 
     div.link[data-context=comments]:hover {
@@ -256,7 +244,7 @@
     .sidebox .spacer,
     .titlebox form.toggle,
     aside.sidebar #discussions li,
-    /*div.link.self*/ {
+    div.link.self {
         background-color: transparent
     }
 
@@ -680,12 +668,7 @@
     .goldvertisement,
     .thing.promoted,
     [id^="ad_"],
-    #siteTable_organic,
-    .give-gold-button {
-        display: none !important
-    }
-
-    .listing-chooser {
+    #siteTable_organic {
         display: none !important
     }
 
@@ -738,6 +721,7 @@
 
     body > .content, body {
         position: relative;
+        z-index: -1;
     }
 
     .side:hover, .side:focus {
