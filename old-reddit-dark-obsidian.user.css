@@ -736,4 +736,27 @@
         opacity: 1
     }
 
+        .redditmod-media, .redditmod-media-expanded {
+            max-width: 800px;
+        }
+
+        span.rank {
+            display: none;
+        }
+
+        .sitetable.linklisting .thing {
+            padding-left: 20px;
+            padding-right: 60px;
+        }
+
+    .thing {
+        /*display: inline-flex;
+        flex-flow: row nowrap;*/
+    }
+
+        .thumbnail.self {
+            display: none;
+        };
+    }
+
 }
